@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+h3,
+h2 {
+  font-family: Nokora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 22px;
+  color: #3d5025;
+  margin-bottom: 1em;
+}
+.container {
+  height: 100%;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+body {
+  background: #c2dba1;
+  width: 100%;
+}
+
+main[class^="main_"] {
+  background: #daecc4;
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.main_uslugi {
+  padding: 1em;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  text-align: justify;
+  color: #3d5025;
+}
+/* !делаем макет святой гроаль */
+.wrap_table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap_table header,
+.wrap_table footer {
+  display: table-row;
+  height: 1px;
+}
+
+.wrap_table main {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap_table main > div {
+  display: table-cell;
+}
+/** ---------------------------шапка------------------------------------------ */
+.header_items div article {
+  padding: 20px 0 0;
+}
+
+.header_items .col-lg-3.header_logo {
+  position: relative;
+  top: 30px;
+  background: #c2dba1;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.header_items .logo div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header_items .logo div:nth-child(2) h3,
+.header_items .logo div:nth-child(2) p {
+  margin: 0;
+}
+
+.header_items div .col-md-3:nth-child(3),
+.header_items div .col-md-3:nth-child(4) {
+  padding-bottom: 20px;
+}
+/* *----------------------------------------------навигация------------------------------------ */
+.navigation {
+  background: #91c94a;
+  margin: 0;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li {
+  padding: 10px 0;
+}
+
+.navigation_items {
+  padding: 10px 20px;
+}
+
+.header_a {
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.header_a::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  width: 35px;
+  height: 30px;
+  background: url(/img/sprite.png) no-repeat 10px -35px;
+}
+
+.header_mail .header_a::before {
+  background-position: -33px 0;
+}
+
+.header_tel .header_a::before {
+  background-position: 3px 0;
+}
+
+/* *-------------------------------------контент------------------------------------------------------ */
+
+.slider-slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-controls label {
+  display: inline-block;
+  margin: 0 5px;
+  width: 25px;
+  height: 25px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  background: white;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 0.5s;
+}
+
+.slider-slides input[type="radio"] {
+  display: none;
+}
+
+.slide_img > img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.slider-slides > div > div {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.slider-slides > div > div > h3 {
+  align-self: center;
+  /* width: 565px;
+  height: 251px; */
+  font-family: Nokora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 1em;
+  color: #3d5025;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"],
+#btn-4:checked ~ .slider-controls label[for="btn-4"],
+#btn-5:checked ~ .slider-controls label[for="btn-5"] {
+  background: #666666;
+}
+
+#btn-1:checked ~ .slide_1,
+#btn-2:checked ~ .slide_2,
+#btn-3:checked ~ .slide_3,
+#btn-4:checked ~ .slide_4,
+#btn-5:checked ~ .slide_5 {
+  opacity: 1;
+}
+
+/* *------------------------------------------подвал------------------------------------------------------- */
+
+footer {
+  background: #91c94a;
+}
+.footer {
+  padding: 5px 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+/* *-----------------------------------------------СТР о НАС-------------------------------------------------------------- */
+.main_onas {
+  background: #daecc4;
+  box-shadow: 3px 5px 8px 0 rgba(0, 0, 0, 0.199);
+  height: 100vh;
+  padding: 0 1em;
+}
+
+.main_onas > div {
+  padding-top: 1em;
+}
+
+.o_nas {
+  display: flex;
+  gap: 35px;
+}
+
+.kroshki,
+.o_nas > div > h1,
+.o_nas > div > h1 + p {
+  margin-bottom: 13px;
+}
+
+.o_nas > div p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: justify;
+  color: #3d5025;
+}
+
+.o_nas div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.o_nas h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 22px;
+  color: black;
+}
+@media screen and (max-width: 763px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .o_nas {
+    flex-wrap: wrap;
+  }
+  .o_nas_img {
+    margin: auto;
+  }
+}
+
+/* *-----------------------------------Делаем Преимущества---------------------------------------------- */
+.priemu > h3,
+.priemu {
+  margin-bottom: 15px;
+}
+
+.card_item {
+  display: flex;
+  background: #91c94a;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #daecc4;
+  height: 100px;
+  margin: auto;
+  flex: 1 168px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.card div {
+  flex: 1;
+}
+
+.card_lic,
+.card_cena,
+.card_op {
+  background: url(/img/priemu.png) no-repeat center;
+}
+
+.card_cena {
+  background-position: left -38px top -52px;
+}
+
+.card_op {
+  background-position: right -38px bottom -52px;
+}
+
+/* *---------------------------------------------------Форма----------------------------------------------------------------- */
+.form input {
+  height: 100%;
+  width: 100%;
+}
+
+.container-form > h3 {
+  text-align: center;
+  margin: 2em;
+}
+
+.form > form > div {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+}
+
+.form > form > div > div {
+  height: 50px;
+}
+
+.in_text {
+  flex: 2 1 240px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #91c94a;
+}
+.in_text input {
+  text-align: center;
+}
+
+.vopros_otpr {
+  flex: 0 2 70px;
+}
+
+.btn {
+  padding: 0.8em;
+  background: #91c94a;
+  border: 1px solid #3d5025;
+}
+
+/* *-----------------------------------------------------------карточка услуги-------------------------------------------------------------------------- */
+/* картинка право, текст лево */
+.card_uslugi {
+  display: flex;
+  gap: 1.3em;
+  flex-wrap: wrap;
+}
+
+.card_uslugi_grup > div,
+.card_margin {
+  margin-bottom: 1em;
+}
+
+.card_uslugi div:first-child {
+  flex: 1 1 500px;
+  align-self: center;
+}
+
+.card_uslugi div:last-child {
+  margin: auto;
+}
+
+.card_uslugi div:last-child img {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* !.card_uslugi div:first-child p:first-child {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+} */
+
+.card_uslugi_grup > div div:first-child p:first-child {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card_uslugi div:first-child p,
+.card_uslugi_grup div ul li {
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  text-align: justify;
+
+  color: #3d5025;
+}
+
+/* меняем маркер у списка */
+.card_uslugi_grup div ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+.card_uslugi_grup div ul li::marker {
+  content: "-";
+}
+
+/* *---------------------------------------------------------Отзывы---------------------------------------------------------- */
+
+.otzivi_title {
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 22px;
+  color: #3d5025;
+}
+
+.card_otziv {
+  border: 1px solid #91c94a;
+  background: #ebfbd7;
+  padding: 10px 12px;
+  color: #3d5025;
+  margin-bottom: 23px;
+}
+
+.card_otziv > div > cite {
+  font-style: normal;
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+.card_otziv > div > time {
+  padding-left: 10px;
+}
+
+.otziv_form > form {
+  padding: 1em;
+  background: #c2dba1;
+  border: 1px solid #ebfbd7;
+}
+
+.otziv_form > form input[type="text"],
+.otziv_form > form input[type="email"],
+.otziv_form > form textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+textarea {
+  resize: none;
+}
+
+.otziv_form > form > div > div:last-child {
+  text-align: center;
+}
+
+.btn_right {
+  margin-left: auto;
+}
+
+.btn_right > button {
+  width: 55px;
+  height: 38px;
+  margin-bottom: 1em;
+  background: #91c94a;
+  border: 1px solid #567432;
+  border-radius: 2px;
+  background: #91c94a url("/img/strelka.png") no-repeat center;
+}
+
+.btn_right > button:active {
+  background-image: #80b43c;
+  box-shadow: 1px 1px 3px black inset;
+}
+
+/* *------------------------------------------Карта-------------------------------------------------------------- */
+.title_kontaks {
+  margin-bottom: 2em;
+}
+
+.kontaks_map > div > div {
+  margin-bottom: 2em;
+}
+
+.ya_map {
+  font-family: arial;
+  font-size: 12px;
+  color: #454545;
+}
+
+#map {
+  width: 100%;
+  height: 30vh;
+}

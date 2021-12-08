@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="описание сайта">
+    <meta name="keywords" content="ключевые слова">
+    <title>Название сайта</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
+    <!--! вставить фавикон -->
+    <!-- <link rel="img" href="#" type="image"> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
+</head>
+
+<body lang="ru">
+    <div class="wrap_table">
+        <header>
+            <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <!-- верхняя шапка -->
+                    <section class="header_items">
+                        <div class="row center-lg center-md center-xs">
+                            <article class="col-lg-3 col-md-9 col-xs-5 header_logo">
+                                <div>
+                                    <a href="index.html">
+                                        <div class="logo">
+                                            <div>
+                                                <img src="img/label.png" alt="">
+                                            </div>
+                                            <div>
+                                                <h3>
+                                                    КПКЭТС
+                                                </h3>
+                                                <p>
+                                                    экология и безопасность
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="col-lg-3 col-md-3 col-xs-12 header_lacation">
+                                <a href="" class="header_a">
+                                    Севастополь, ул. А. Кесаева, 9<br />
+                                    офис 11
+                                </a>
+                            </article>
+                            <article class="col-lg-3 col-md-3 col-xs-6 header_mail">
+                                <a href="" class="header_a">
+                                    kp_kets@mail.ru
+                                </a>
+                            </article>
+                            <article class="col-lg-3 col-md-3 col-xs-6 header_tel">
+                                <a href="" class="header_a">
+                                    +7 (978)-965-00-80
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!--* навигация сайта -->
+            <nav class="navigation row">
+                <ul class="col-lg-12 col-md-12 col-xs-12">
+                    <div class="row center-xs">
+                        <li class="col-lg-offset-2 col-lg-2 col-md-3 col-xs-12"><a href="onas.html"
+                                class="navigation_items">О
+                                КОМПАНИИ</a></li>
+                        <li class="col-lg-2 col-md-2 col-xs-12"><a href="uslugi.html"
+                                class="navigation_items">УСЛУГИ</a></li>
+                        <li class="col-lg-3 col-md-3 col-xs-12"><a href="otzivi.html" class="navigation_items">ОТЗЫВЫ О
+                                НАС</a>
+                        </li>
+                        <li class="col-lg-2 col-md-3 col-xs-12"> <a href="kontaks.html"
+                                class="navigation_items">КОНТАКТЫ</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main class="main_uslugi">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 kroshki">
+                        <a href="">Главная</a> <span>>></span> <a href="">Контакты</a>
+                    </div>
+                    <section>
+                        <h1>
+                            НАШИ КОНТАКТНЫЕ ДАННЫЕ
+                        </h1>
+                        <div class="title_kontaks">
+                            <p>
+                                <b> ООО “КПКЭТС”</b>осуществляет деятельность по сбору, транспортированию, обработке,
+                                утилизации, обезвреживанию, размещению отходов I-V классов опасности, а также создаёт
+                                максимально благоприятные условия работы.
+                            </p>
+                        </div>
+                        <div class="kontaks_map">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                    <div id="map"></div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                    <p>
+                                        Предприятие «КПКЭТС» по своей организационно-правовой форме является обществом с
+                                        ограниченной ответственностью — юридическим лицом с частной формой
+                                        собственности.
+                                    </p>
+                                    <cite>
+                                        <b>Адрес:</b>Севастополь, ул. А. Кесаева, 9 <br>
+                                        офис 11 <br>
+                                        <b>Телефон:</b> <a href="tel:+79789650080">+7 (978)-965-00-80</a> <br>
+                                        <b>E-mail:</b><a href="mailto:kp_kets@mail.ru">kp_kets@mail.ru</a>
+                                    </cite>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <div class="footer">
+                <div>
+                    <span style="font-size: 1.2em; vertical-align: -1px;">&copy;</span><span>ООО “КП КрымЭкоТехСервис” -
+                        утилизация различных видов отходов</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+
+        ymaps.ready(init);
+        var myMap;
+
+        function init() {
+
+            myMap = new ymaps.Map("map", {
+                center: [44.586657574586894, 33.45440199999998], // Координаты центра карты
+                zoom: 17 // Маштаб карты
+            });
+
+            myMap.controls.add(
+                new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+            );
+
+            myPlacemark = new ymaps.Placemark([44.586657574586894, 33.45440199999998], { // Координаты метки объекта
+
+                preset: 'twirl#greenDotIcon' // Тип метки
+            });
+
+            myMap.geoObjects.add(myPlacemark); // Добавление метки
+            // myPlacemark.balloon.open(); // Открытие подсказки метки
+
+        };
+
+    </script>
+</body>
+
+</html>
