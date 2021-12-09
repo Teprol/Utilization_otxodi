@@ -183,7 +183,7 @@ p {
   opacity: 0;
   width: 100%;
   transition: opacity 0.5s;
-  min-height: 230px;
+  min-height: 220px;
 }
 
 .slider-slides input[type="radio"] {
@@ -207,8 +207,8 @@ p {
   font-family: Nokora;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.4em;
-  line-height: 1em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   color: #3d5025;
   flex: 1 1;
 }
