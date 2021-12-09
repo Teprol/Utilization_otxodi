@@ -191,25 +191,29 @@ p {
 
 .slide_img > img {
   max-width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .slider-slides > div > div {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  align-items: center;
   padding: 10px;
 }
 
 .slider-slides > div > div > h3 {
   align-self: center;
-  /* width: 565px;
-  height: 251px; */
   font-family: Nokora;
   font-style: normal;
   font-weight: bold;
   font-size: 1.7em;
   line-height: 1em;
   color: #3d5025;
+  flex: 1 1;
+}
+
+.slider-slides > div > div > div {
+  flex: 2 1;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
