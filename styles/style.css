@@ -42,7 +42,7 @@ main[class^="main_"] {
 }
 
 .main {
-  padding-top: 50px;
+  padding-top: 1.5em;
 }
 
 .main_uslugi {
@@ -183,6 +183,7 @@ p {
   opacity: 0;
   width: 100%;
   transition: opacity 0.5s;
+  min-height: 220px;
 }
 
 .slider-slides input[type="radio"] {
